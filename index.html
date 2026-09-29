@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Gym 2.0</title>
+  <meta name="theme-color" content="#0f1115">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Gym 2.0">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="icon" href="icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="title">Training</h1>
+  </header>
+
+  <main id="view"></main>
+
+  <!-- Pausen-Timer -->
+  <div id="timer" class="timer hidden">
+    <button class="t-btn" data-t="-30">−30</button>
+    <div class="t-center">
+      <div id="timer-label" class="t-label">Pause</div>
+      <div id="timer-time" class="t-time">2:30</div>
+    </div>
+    <button class="t-btn" data-t="30">+30</button>
+    <button class="t-btn t-stop" data-t="stop">✕</button>
+  </div>
+
+  <nav class="tabbar">
+    <button data-tab="training" class="active"><span>🏋️</span>Training</button>
+    <button data-tab="progress"><span>📈</span>Fortschritt</button>
+    <button data-tab="cardio"><span>🏃</span>Ausdauer</button>
+    <button data-tab="food"><span>🍽️</span>Essen</button>
+    <button data-tab="settings"><span>⚙️</span>Mehr</button>
+  </nav>
+
+  <div id="modal" class="modal hidden"><div class="modal-card" id="modal-card"></div></div>
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
